@@ -107,7 +107,7 @@ const Register = (): JSX.Element => {
         <p className=' own-input-error'>{(errors.confirmPassword != null) ? 'The password are not the same' : null }</p>
 
         <button className='w-full mt-6 border rounded-lg bg-primary p-2 text-white uppercase font-semibold hover:opacity-80'>
-          Login
+          Sing up
         </button>
         {error !== '' && <p className='text-center own-input-error'>{ error }</p>}
     </div>
