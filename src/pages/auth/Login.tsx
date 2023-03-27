@@ -3,16 +3,17 @@ import { useForm, type SubmitHandler } from 'react-hook-form'
 import { api } from '../../services/axiosService'
 import { setAuthToken } from '../../services/localStorageService'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../hooks/useAuth'
 interface FormData {
   email: string
   password: string
 }
 
 const Login = (): JSX.Element => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
   const [error, setError] = useState('')
-
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
   const navigate = useNavigate()
+  const { setCurrentUser } = useAuth()
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
@@ -21,6 +22,7 @@ const Login = (): JSX.Element => {
         password: data.password
       })
       setAuthToken(response.data.access_token)
+      setCurrentUser(response.data)
       navigate('/')
     } catch (err: any) {
       setError(err.response?.data.message || 'Internal error')
