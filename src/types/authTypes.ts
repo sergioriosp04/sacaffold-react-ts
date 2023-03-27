@@ -6,5 +6,9 @@ interface User {
 
 export interface UserStructureAuthContext {
   currentUser: User
-  setCurrentUser: React.SetStateAction<any>
+  setCurrentUser?: React.SetStateAction<any>
+}
+
+export interface ChildrenProvider {
+  children: JSX.Element
 }

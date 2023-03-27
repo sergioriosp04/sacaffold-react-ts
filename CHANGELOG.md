@@ -16,7 +16,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add authProvider fror user state global
 - Add types for AuthContext
 
-
 ## [0.0.1] - 2023-02-10
 ### Added
 - Add auth layout, register and login

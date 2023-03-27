@@ -1,18 +1,16 @@
 import { createContext, useState } from 'react'
-import { type UserStructureAuthContext } from '../types/authTypes'
+import { type ChildrenProvider, type UserStructureAuthContext } from '../types/authTypes'
 
-export const AuthContext = createContext<UserStructureAuthContext | null>(null)
-
-interface Children {
-  children: JSX.Element
+const initialUser = {
+  id: null,
+  email: '',
+  access_token: ''
 }
 
-export const AuthProvider = ({ children }: Children): JSX.Element => {
-  const [currentUser, setCurrentUser] = useState({
-    id: null,
-    email: '',
-    access_token: ''
-  })
+export const AuthContext = createContext<UserStructureAuthContext>({ currentUser: initialUser })
+
+export const AuthProvider = ({ children }: ChildrenProvider): JSX.Element => {
+  const [currentUser, setCurrentUser] = useState(initialUser)
 
   return (
     <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
