@@ -23,7 +23,7 @@ const Login = (): JSX.Element => {
       })
       setAuthToken(response.data.access_token)
       setCurrentUser(response.data)
-      navigate('/')
+      navigate('/dashboard')
     } catch (err: any) {
       setError(err.response?.data.message || 'Internal error')
     }

@@ -7,6 +7,7 @@ interface User {
 export interface UserStructureAuthContext {
   currentUser: User
   setCurrentUser?: React.SetStateAction<any>
+  loadingAuth?: boolean
 }
 
 export interface ChildrenProvider {

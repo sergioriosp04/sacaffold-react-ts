@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Removed
 
 ## [0.0.3] - 2023-03-09
+- Add protected routes
+
 ## [0.0.2] - 2023-02-10
 ### Added
 - Add useAuthContext wich is a custom hook
@@ -24,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add changelog
 - Add .env variables
 
-[unreleased]: https://github.com/sergioriosp04/github_repository_name/compare/v1.0.0...HEAD
-[0.0.2]: https://github.com/sergioriosp04/github_repository_name/compare/v0.0.1...v0.0.2
-[0.0.1]: https://github.com/sergioriosp04/github_repository_name/releases/tag/v0.0.1
+[unreleased]: https://github.com/sergioriosp04/scaffold-react-ts/compare/v1.0.0...HEAD
+[0.0.2]: https://github.com/sergioriosp04/scaffold-react-ts/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/sergioriosp04/scaffold-react-ts/compare/v0.0.1...v0.0.2
+[0.0.1]: https://github.com/sergioriosp04/scaffold-react-ts/releases/tag/v0.0.1

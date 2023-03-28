@@ -9,3 +9,7 @@ export const getAuthToken = (): string => {
 export const setAuthToken = (token: string): void => {
   localStorage.setItem('token', token)
 }
+
+export const getToken = (): string | null => {
+  return localStorage.getItem('token')
+}

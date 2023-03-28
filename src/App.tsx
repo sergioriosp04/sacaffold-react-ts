@@ -4,6 +4,8 @@ import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
 import ResetPassword from './pages/auth/ResetPassword'
 import { AuthProvider } from './context/AuthProvider'
+import { ProtectedRoute } from './layouts/ProtectedRoute'
+import { User } from './pages/dashboard/User'
 
 function App (): JSX.Element {
   return (
@@ -17,8 +19,8 @@ function App (): JSX.Element {
               <Route path='reset-password' element={<ResetPassword />} />
             </Route>
 
-            <Route path='/'>
-
+            <Route path='/dashboard' element={<ProtectedRoute />}>
+              <Route index element={<User />} />
             </Route>
           </Routes>
         </ AuthProvider>
